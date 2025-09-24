@@ -15,8 +15,8 @@ int main() {
     char cidade2[50];
     int população, pontos;
     int população2, pontos2;
-    float área, PIB;
-    float área2, PIB2;
+    float área, PIB, densidade, PerCapita;
+    float área2, PIB2, densidade2, PerCapita2;
 
     printf("Olá, usuário. Preencha os dados da primeira carta!\n\n");
     
@@ -34,7 +34,10 @@ int main() {
 
     printf("Digite a quantidade de pontos turísticos da cidade: "); //Campo para o usuário digitar a qtde de pontos turísticos
     scanf("%d", &pontos); //Leitura pontos turísticos
-    
+
+    densidade = população / área;
+    PerCapita = PIB / população;
+
     printf("\n\nAgora preencha os dados da segunda carta!\n\n");
     
     printf("Digite o nome da cidade: "); //Campo para o usuário digitar o nome da cidade
@@ -52,6 +55,10 @@ int main() {
     printf("Digite a quantidade de pontos turísticos da cidade: "); //Campo para o usuário digitar a qtde de pontos turísticos
     scanf("%d", &pontos2); //Leitura pontos turísticos
 
+    densidade2 = população2 / área2;
+    PerCapita2 = PIB2 / população2;
+
+
     printf("\n\n\nDesafio Super Triunfo!\n\n"); //Nome do jogo
     printf("Carta 1:\n"); //Titulo da primeira carta
     printf("Estado: %c\n", estado);
@@ -60,7 +67,10 @@ int main() {
     printf("População: %d\n", população);
     printf("Área: %.2f km²\n", área);
     printf("PIB: %.2f bilhões de reais\n", PIB);
-    printf("Número de Pontos Turísticos: %d\n\n", pontos);
+    printf("Número de Pontos Turísticos: %d\n", pontos);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade);
+    printf("PIB per capita: %.2f reais\n\n", PerCapita);
+
 
     printf("Carta 2:\n"); //Titulo da segunda carta
     printf("Estado: %c\n", estado2);
@@ -70,6 +80,8 @@ int main() {
     printf("Área: %.2f km²\n", área2);
     printf("PIB: %.2f bilhões de reais\n", PIB2);
     printf("Número de Pontos Turísticos: %d\n\n", pontos2);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade2);
+    printf("PIB per capita: %.2f reais\n\n", PerCapita2);
 
 
     
